@@ -33,6 +33,17 @@ public class MainActivity extends AppCompatActivity {
 
     Button EMI ;
 
+
+    public void valider(View view){
+
+        Intent intent = new Intent(MainActivity.this,call.class);
+
+        startActivity(intent);
+
+    }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,54 +89,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        /*if (sum_action == 1) {
-            String N1= editText1.getText().toString();
-            String N2= editText2.getText().toString();
-
-            int resch1 = Integer.parseInt(N1);
-            int resch2 = Integer.parseInt(N2);
-            Bundle extras = getIntent().getExtras();
-            int result = extras.getInt("result");
-
-            System.out.println(result);
-            System.out.println(resch1);
-            System.out.println(resch2);
-
-            if (result == (resch1 + resch2)) {
-                Toast.makeText(getApplicationContext(), "Challenge Completed", Toast.LENGTH_SHORT).show();
-
-                String url = editTextUrl.getText().toString();
-                if (url.isEmpty()) {
-                    url = "https://www.emi.ac.ma/";
-                } else if (!url.startsWith("http://") && !url.startsWith("https://")) {
-                    url = "http://" + url;
-                }
-                sum_action = 0;
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                startActivity(intent);
-
-            } else {
-                sum_action = 0;
-                Toast.makeText(getApplicationContext(), "Fausse Somme", Toast.LENGTH_SHORT).show();
-
-            }
-        }
-*/
-
-        /*EMI = findViewById(R.id.EMI);
-
-        EMI.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoURL("https://www.cpge.ac.ma/cpgepages/cont/concoursnational.aspx");
-            }
-        });*/
     }
 
-   /* private void gotoURL(String s) {
-        Uri uri = Uri.parse(s);
-        startActivity(new Intent(Intent.ACTION_VIEW,uri));
-    }*/
 
     private void makePhoneCall(){
         // enregistrer nombre tapé sur nulber
@@ -171,7 +136,19 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         String n = data.getStringExtra("result");
 
+        if(resultCode==5){
+        String url = "";
+        if (url.isEmpty()) {
+            url = "https://www.emi.ac.ma/";
+        } else if (!url.startsWith("http://") && !url.startsWith("https://")) {
+            url = "http://" + url;
+        }
+        sum_action = 0;
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
 
+
+        }
 
     }
 }

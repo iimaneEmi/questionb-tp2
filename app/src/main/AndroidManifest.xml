@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calling">
         <activity
+            android:name=".call"
+            android:exported="false" />
+        <activity
             android:name=".check"
             android:exported="false" />
         <activity
@@ -25,6 +28,5 @@
             </intent-filter>
         </activity>
     </application>
-
 
 </manifest>

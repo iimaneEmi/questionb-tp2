@@ -46,16 +46,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="566dp"
-        android:text="EMI" />
-
     <Button
         android:id="@+id/EMI"
         android:layout_width="wrap_content"
@@ -63,6 +53,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="109dp"
+
         android:layout_marginBottom="498dp"
         android:text="EMI" />
 
@@ -76,7 +67,7 @@
         android:layout_marginBottom="375dp"
         android:ems="10"
         android:inputType="number"
-        android:text="Name" />
+        android:text="number" />
 
 
     <EditText
@@ -89,7 +80,7 @@
         android:layout_marginBottom="292dp"
         android:ems="10"
         android:inputType="number"
-        android:text="Name" />
+        android:text="number" />
 
     <TextView
         android:id="@+id/textView4"
@@ -120,5 +111,20 @@
         android:layout_marginEnd="328dp"
         android:layout_marginBottom="179dp"
         app:srcCompat="@drawable/ic_baseline_control_point_24" />
+
+    <Button
+        android:id="@+id/valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:onClick="valider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="597dp"
+        android:text="valider" />
 
 </RelativeLayout>
